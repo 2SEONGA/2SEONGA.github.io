@@ -15,8 +15,6 @@ media_subpath: "/posts/2025-01-15-react-vdom-rendering"
 
 # React 특징 : VDOM, Render + Commit Phase 통한 렌더링 원리
 
-<aside>
-
 ## Facebook 에서 React 의 등장 배경
 
 4개의 사진 리스트를 보여주는 페이지에서 더보기 버튼을 눌렀을 때 추가 4개의 사진을 보여주는건,
@@ -207,4 +205,3 @@ const a = (
 - **비동기(Asynchronous)**로 실행
     - 로직이 **복잡한** 경우 긴 시간이 걸리기때문에 페이지 일부의 깜빡임(Loading 상태)를 보여주는 것이 좋다
     - 로직이 비교적 **간단한** 경우 깜빡거림이 유저 사용성에 불편함을 준다는 판단 시 useLayoutEffect 사용
-</aside>

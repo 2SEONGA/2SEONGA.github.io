@@ -14,7 +14,7 @@ media_subpath: "/posts/2025-01-15-react-props-state-ref"
 
 # Component 생성 시 파라미터(Props)와 내부 변수(State), 외부 변수(Ref)
 
-<aside>
+
 
 > **파라미터 역할을 하는 Props** & **내부 변수 역할을 하는 State** & **React 독립적 Ref**
 > 
@@ -546,5 +546,3 @@ function App() {
 - **Ref** : React Component **외부 변수 = 리렌더링이 필요없는 값**
     - 값을 담거나 조작하고싶으나 그것이 리렌더링을 발생시키지 않을 경우
     - 순수 HTML 요소에 접근할때
-
-</aside>

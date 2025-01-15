@@ -8,7 +8,7 @@ categories: [React]
 tags: [React, VDOM, useEffect]
 pin: true
 image:
-  path: https://github.com/user-attachments/assets/c0d1a8d0-cb6d-4665-bd66-b339ab5d159a
+  path: https://github.com/user-attachments/assets/f2b71e34-99ed-4f63-994b-aad7922b6848
 
 media_subpath: "/posts/2025-01-15-react-vdom-rendering"
 ---

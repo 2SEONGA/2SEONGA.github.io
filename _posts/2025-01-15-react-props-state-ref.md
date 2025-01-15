@@ -14,8 +14,6 @@ media_subpath: "/posts/2025-01-15-react-props-state-ref"
 
 # Component 생성 시 파라미터(Props)와 내부 변수(State), 외부 변수(Ref)
 
-
-
 > **파라미터 역할을 하는 Props** & **내부 변수 역할을 하는 State** & **React 독립적 Ref**
 > 
 
@@ -55,6 +53,7 @@ React Hook 은 함수 컴포넌트를 사용하여 개발하고 함수형 프로
 ### **setState** 는 동기가 아닌 **비동기**로 동작
 
 <img alt="2025-01-15-react-props-state-ref(3)" src="https://github.com/user-attachments/assets/6c655ef9-ab7b-46b1-86f6-5244f502cc1e" />
+
 - **값** 파라미터 : 몇번을 호출해도 언제나 똑같은 2(+1)만을 반환 (참조 투명성 위배)
 - **함수** 파라미터 : 호출 횟수에 따라 매번 이전의 상태에 더해진 값(+횟수)을 반환 (순수함수)
 
@@ -300,11 +299,11 @@ document.getElementById('child').addEventListener('click', () => {
   alert('Child clicked!');
 });
 ```
-<img width="854" alt="2025-01-15-react-props-state-ref(6)" src="https://github.com/user-attachments/assets/081b377e-795d-428e-bf56-445815370a96" />
+<img alt="2025-01-15-react-props-state-ref(6)" src="https://github.com/user-attachments/assets/081b377e-795d-428e-bf56-445815370a96" />
 
-<img width="546" alt="2025-01-15-react-props-state-ref(7)" src="https://github.com/user-attachments/assets/cf97bb3f-ba7c-4c22-9f58-55ef0e2548c7" />
+<img alt="2025-01-15-react-props-state-ref(7)" src="https://github.com/user-attachments/assets/cf97bb3f-ba7c-4c22-9f58-55ef0e2548c7" />
 
-<img width="697" alt="2025-01-15-react-props-state-ref(8)" src="https://github.com/user-attachments/assets/2c913ccb-d4cf-4150-b213-f2535bf637dc" />
+<img alt="2025-01-15-react-props-state-ref(8)" src="https://github.com/user-attachments/assets/2c913ccb-d4cf-4150-b213-f2535bf637dc" />
 
 - **stopPropagation()**
 
@@ -415,7 +414,7 @@ function App() {
         - **Controller** (= **SetState** 호출지) 의 위치는 전혀 상관 없음
         - **Model** (= **State** 위치) 의 위치만이 상관있음, 이를 기준으로 View 리렌더
 
-<img width="971" alt="2025-01-15-react-props-state-ref(10)" src="https://github.com/user-attachments/assets/596b6a34-d49b-42a8-badb-012dfcc38549" />
+<img alt="2025-01-15-react-props-state-ref(10)" src="https://github.com/user-attachments/assets/596b6a34-d49b-42a8-badb-012dfcc38549" />
 
 - **Model**(State) 은 **View** 라는 컴포넌트가 리렌더 되냐 안되냐를 결정하는 기준이고, 방향은 단방향 바인딩
 - Controller 는 Model 을 직접적으로 변경하고 → 자연스럽게 Model 의 변경이 View 의 변경을 발생시키기에
@@ -428,7 +427,7 @@ function App() {
         1. **Props Drilling** : State(Model) 에 의존하는 View 가 State 전달받기 위해 Props 여행
         2. **State 의 변경은 State 가 속한 부모의 자식 컴포넌트 모두를 리렌더링** (나비효과)
 
-<img width="812" alt="2025-01-15-react-props-state-ref(11)" src="https://github.com/user-attachments/assets/0a8f8ce3-0aac-4013-9934-2f8bebb422e3" />
+<img alt="2025-01-15-react-props-state-ref(11)" src="https://github.com/user-attachments/assets/0a8f8ce3-0aac-4013-9934-2f8bebb422e3" />
 
 - 기존 MVC 패턴에서의 상태 수직구조의 단점들을 → 새 Flux 패턴에서의 상태 수평구조로 모두 해결
 
@@ -536,7 +535,7 @@ function App() {
 
 ## 4. 복습 : Props 와 State, Ref 각각 언제 사용해야할까?
 
-<img width="827" alt="2025-01-15-react-props-state-ref(12)" src="https://github.com/user-attachments/assets/85531bef-4545-4930-9a44-9a19d4c27373" />
+<img alt="2025-01-15-react-props-state-ref(12)" src="https://github.com/user-attachments/assets/85531bef-4545-4930-9a44-9a19d4c27373" />
 
 - **Props** : React Component 의 **파라미터 - 일반적으로 쓸때 객체 비구조화로 사용했음 `{}`**
     - Props 를 받아 그냥 쓰는것과 / Props 를 받아 새 상태의 초기값으로 쓰는 경우

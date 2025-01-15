@@ -1,5 +1,6 @@
 ---
-title: React 특징 : VDOM, Render + Commit Phase 통한 렌더링 원리
+title: |
+  React 특징 : VDOM, Render + Commit Phase 통한 렌더링 원리
 description: >-
   React 특징 : Virtual DOM, Render + Commit Phase 통한 렌더링 원리 정리
 author: 2SEONGA

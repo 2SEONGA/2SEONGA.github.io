@@ -1,8 +1,13 @@
 ---
-layout: post
 title: "React 등장과 JSX 문법"
+description: >-
+  React 등장과 JSX 문법 정리
+author: 2SEONGA
 date: 2025-01-15
-categories: react
+categories: [React]
+tags: [React], [JSX]
+pin: true
+media_subpath: "/posts/2025-01-15-react-and-jsx"
 ---
 
 # React 등장과 JSX 문법

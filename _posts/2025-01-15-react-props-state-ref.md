@@ -54,12 +54,9 @@ React Hook 은 함수 컴포넌트를 사용하여 개발하고 함수형 프로
 
 <img alt="2025-01-15-react-props-state-ref(3)" src="https://github.com/user-attachments/assets/6c655ef9-ab7b-46b1-86f6-5244f502cc1e" />
 
-- **값** 파라미터 : 몇번을 호출해도 언제나 똑같은 2(+1)만을 반환 (참조 투명성 위배)
-- **함수** 파라미터 : 호출 횟수에 따라 매번 이전의 상태에 더해진 값(+횟수)을 반환 (순수함수)
 
 - 바로 수행하지 않고, 차곡차곡 모아두었다가 리렌더링 시 한번에 일괄적으로 상태변경 적용
 - 여러 상태 업데이트를 모아서 효율적으로 처리하고, 성능 최적화를 위해 렌더링 최소화
-- **동기**의 경우 `count = count + 1` **바로 실행** ↔ **비동기**의 경우 `setCount(count + 1)` **나중 실행**
 
 <img alt="2025-01-15-react-props-state-ref(4)" src="https://github.com/user-attachments/assets/3bab6ade-b571-4655-8d02-752103af19e8" />
 
@@ -120,7 +117,7 @@ return <button onClick={handleClick}>Click me</button>;
 
 ---
 
-**setState를 사용하는 두 가지 방법**
+#### **setState를 사용하는 두 가지 방법**
 
 **1. 상태값 자체를 파라미터로 전달**
 
@@ -148,10 +145,6 @@ setCount((prevCount) => prevCount + 1);
     → 상태 업데이트 간 의존성이 있는 경우 추천
     
 
----
-
-**함수형 업데이트의 필요성 예시**
-
 ```jsx
 const [count, setCount] = useState(0);
 
@@ -168,7 +161,6 @@ return <button onClick={handleClick}>Click me</button>;
 - 결과적으로 버튼을 클릭하면 count는 **3** 증가
     
     각 호출은 최신 상태값을 기반으로 계산하므로, 상태 업데이트의 정확성이 보장
-    
 
 ---
 
@@ -185,10 +177,6 @@ return <button onClick={handleClick}>Click me</button>;
 ![2025-01-15-react-props-state-ref(5)](https://github.com/user-attachments/assets/979206e1-98d5-4b00-ad68-7bb824e06e83)
 
 ### React 상태 관리 : Single Source of Truth (SSOT)
-
-**동일한 데이터는 하나의 상태로만 관리** → 상태 일관성 유지 및 상태 변경지, 사용지 명확
-
-- **문제점: 부모와 자식의 상태 중복**
 
 ```jsx
 function InputComponent({ value, onChange }) {
@@ -267,18 +255,6 @@ function App() {
   );
 }
 ```
-
-1. **단일 상태 관리**
-
-string은 부모에서만 관리되며, 자식은 이를 그대로 받습니다. 상태의 소유권은 부모에게만
-
-2. **양방향 데이터 바인딩**
-
-자식의 onChange 이벤트는 부모의 setString을 호출하여 부모 상태를 업데이트, 상태 변화가 부모에 바로 반영
-
-3. **일관성 유지**
-
-모든 상태는 부모에서 관리되기 때문에 자식이 부모 상태를 항상 최신 상태로 반영
 
 ---
 
@@ -398,17 +374,6 @@ function App() {
 
 ---
 
-**부모-자식 그리고 useRef 과 setState 들이 복잡하게 얽혀있을때 어떻게 리렌더 영향을 주나?**
-
-: 모든 컴포넌트 그리고 부모-자식에서의 리렌더 기준은 무조건 **State**(Model) 가 어디있는지에 의존
-
-- 부모-자식간 리렌더는 아래 세 가지 중 가장 마지막인 **State**(Model) 에 의존
-    1. ~~useRef 로 생성된 Ref 가 어디있는지? (Referenece 내 값이 바뀐 경우 어디에 영향을 주나?)~~
-    2. ~~useState 로 생성된 setState 가 어디서 호출됐는지? (SetState 가 어디를 리렌더 하나?)~~
-    3. **useState 로 생성된 State 가 속한 컴포넌트를 기준으로(부모로) 모든 자식 컴포넌트 리렌더**
-
----
-
 - 생각해보면 단순한 것
     - **= 모든 View 의 리렌더의 기준은 Model 변경 여부에 의존** (그림 복습)
         - **Controller** (= **SetState** 호출지) 의 위치는 전혀 상관 없음
@@ -464,7 +429,7 @@ function App() {
         }
         ```
         
-    - 특정 요소에 **Utterances 를 붙일때나**
+    - 특정 요소에 **Utterances 를 붙일 때나**
         
         ```jsx
         const Comments = () => {
@@ -533,11 +498,11 @@ function App() {
 - **다른 예시로 React Hook Form 사용 시 별도의 분리된 컴포넌트에 useForm 의 register 적용 시**
     - **문제 발생** = **3.2.2.3.2. 충격적인 사실 : 함수형 컴포넌트에는 Ref 가 미존재 → forwardRef 필요**
 
-## 4. 복습 : Props 와 State, Ref 각각 언제 사용해야할까?
+## 4. 복습 : Props 와 State, Ref 사용
 
 <img alt="2025-01-15-react-props-state-ref(12)" src="https://github.com/user-attachments/assets/85531bef-4545-4930-9a44-9a19d4c27373" />
 
-- **Props** : React Component 의 **파라미터 - 일반적으로 쓸때 객체 비구조화로 사용했음 `{}`**
+- **Props** : React Component 의 **파라미터 - 일반적으로 쓸 때 객체 비구조화로 사용 `{}`**
     - Props 를 받아 그냥 쓰는것과 / Props 를 받아 새 상태의 초기값으로 쓰는 경우
 - **State** : React Component **내부 변수 = 리렌더링이 필요한 값**
     - 유저 인터렉션이 있는가? 상태가 있어야한다

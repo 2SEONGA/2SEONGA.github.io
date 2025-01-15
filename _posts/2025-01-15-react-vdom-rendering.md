@@ -61,17 +61,16 @@ media_subpath: "/posts/2025-01-15-react-vdom-rendering"
 
 - 실제 웹 브라우저 렌더링(Layout → Paint)으로 알아보는 **실제 DOM 과 VDOM 차이**
 
-> *실제 DOM 조작의 문제는 매번 **트리 변화 → 레이아웃 변화 → 페인트(렌더링)**을 일으킨다는 것*
+>  DOM 조작의 문제 : 
+트리 변화 → 레이아웃 변화 → 페인트(렌더링)을 매 번 일으킨다는 것
 > 
-> 
-> *ex  )0개의 노드를 하나 하나 수정하면, 그 뜻은 30번의 (잠재적인) 레이아웃 재계산과 30번의 (잠재적인) 리렌더링을 초래한다는 의미*
-> 
-> - ***이전 VDOM 과 새 VDOM 과의 비교를 통해 어떤 부분을 바꾸면 될지 인지한 뒤 실제 DOM 리렌더를 단 한번만 하게끔 해주는것이 VDOM 의 의의***
-> - ***이전과 신규 버전의 VDOM 을 비교하는 과정을 아래서 배울 Reconciliation 재조정***
+> - 이전 VDOM 과 새 VDOM 과의 비교를 통해 어떤 부분을 바꾸면 될지 인지한 뒤 실제 DOM 리렌더를 단 한번만 하게끔 해주는것이 VDOM 의 의의
+> - 이전과 신규 버전의 VDOM 을 비교하는 과정이 아래서 배울 Reconciliation 재조정
 
 <img alt="2025-01-15-react-vdom-rendering(6)" src="https://github.com/user-attachments/assets/6fbdb64b-bd6d-4d5a-acdf-2d283fc036ce" />
 
-**V-DOM 도 결국 DOM 과 동일** : 표현만 다를뿐 + **React 에서 ‘부모 - 자식’의 의미도 HTML 에서의 ‘부모 - 자식’과 동일**
+**V-DOM 도 결국 DOM 과 동일** : 표현만 다를뿐
+ **React 에서 ‘부모 - 자식’의 의미도 HTML 에서의 ‘부모 - 자식’과 동일**
 
 ## 2. Reconciliation 재조정 = 이전 / 신규 VDOM 비교
 
@@ -150,17 +149,14 @@ const a = (
 > 
 1. **Cleanup useLayoutEffect → Run useLayoutEffect** : DOM Mutations 이 끝나자마자 **동기 수행**
 
-> *Your code runs immediately after the DOM has been updated, but before the browser has had a chance to "paint" those changes (the user doesn't actually see the updates until after the browser has repainted).*
-> 
-
 > 
 #### 🚫 **주의** : useLayoutEffect 을 “Render - Paint” 사이의 딜레이를 줄이기 위한 방법으로 사용하지 말 것
 >
 
 - **사실상 의미가 없음**
-    - **useLayoutEffect** : Render → **API 호출**(동기 호출일뿐 **비동기로 동작**) → Paint
+    - **useLayoutEffect** : Render → **API 호출**(동기 호출일 뿐 **비동기로 동작**) → Paint
     - **useEffect** : Render → Paint → **API 호출(비동기로 동작)**
-- useEffect 사용하고 스피너, 로딩바, 스켈레톤(데이터 없는 빈 컴포넌트)을 통해 **CLS 및 UX 개선**
+- useEffect 사용 및 스피너, 로딩바, 스켈레톤(데이터 없는 빈 컴포넌트)을 통해 **CLS 및 UX 개선**
 
 ### (3) (Re)Paint : Web Browser Rendering
 

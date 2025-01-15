@@ -12,6 +12,8 @@ image:
 media_subpath: "/posts/2025-01-15-react-and-jsx"
 ---
 
+# React 등장과 JSX 문법
+
 ## 웹 프론트엔드 개발과 React 등장
 
 ### (1) 웹 프론트엔드 개발 : Rendering = 웹 페이지의 화면 변경

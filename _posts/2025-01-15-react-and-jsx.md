@@ -8,7 +8,7 @@ categories: [React]
 tags: [React, JSX]
 pin: true
 image:
-  path: https://github.com/2SEONGA/2SEONGA.github.io/blob/master/assets/images/2025-01-15-react-and-jsx(1).png
+  path: https://github.com/user-attachments/assets/b707bb72-efbb-4353-94fb-e8a45b8879a6
 media_subpath: "/posts/2025-01-15-react-and-jsx"
 ---
 
@@ -27,7 +27,7 @@ media_subpath: "/posts/2025-01-15-react-and-jsx"
 - **하나의 이벤트가 다수 DOM을 변경시키는 경우**
   - 하나의 이벤트 = 하나의 **상태(State)** 변경 → **다수 DOM(View)** 변경
 
-![React 상태 관리 예제](https://github.com/2SEONGA/2SEONGA.github.io/blob/master/assets/images/2025-01-15-react-and-jsx(1).png)
+![2025-01-15-react-and-jsx(1)](https://github.com/user-attachments/assets/6e6860ab-6e65-4960-a6bb-36944a6cdf85)
 
 ### (3) SPA (Single Page Application) 란 무엇인가? = 출장뷔페
 
@@ -57,7 +57,7 @@ media_subpath: "/posts/2025-01-15-react-and-jsx"
 
 React에서 화면은 여러 **React Component**로 구성되며, 이를 통해 **HTML Element**를 쉽게 관리
 
-![React Component 구조](![/Users/leeseonga/github.io/2SEONGA.github.io/assets/images/2025-01-15-react-and-jsx(2).png](https://github.com/2SEONGA/2SEONGA.github.io/blob/master/assets/images/2025-01-15-react-and-jsx(2).png))
+![2025-01-15-react-and-jsx(2)](https://github.com/user-attachments/assets/57543023-fac2-4240-976d-e7095a9b8756)
 
 - React Component는 독립적이고 재사용 가능한 UI 요소
 - 부모 컴포넌트에서 자식 컴포넌트로 **Props**를 전달하여 데이터 공유/전달

@@ -25,7 +25,7 @@ media_subpath: "/posts/2025-01-15-react-and-jsx"
 - **하나의 이벤트가 다수 DOM을 변경시키는 경우**
   - 하나의 이벤트 = 하나의 **상태(State)** 변경 → **다수 DOM(View)** 변경
 
-![React 상태 관리 예제](_posts/img/2025-01-15-react-and-jsx(1).png)
+![React 상태 관리 예제](/Users/leeseonga/github.io/2SEONGA.github.io/assets/images/2025-01-15-react-and-jsx(1).png)
 
 ### (3) SPA (Single Page Application) 란 무엇인가? = 출장뷔페
 
@@ -55,7 +55,7 @@ media_subpath: "/posts/2025-01-15-react-and-jsx"
 
 React에서 화면은 여러 **React Component**로 구성되며, 이를 통해 **HTML Element**를 쉽게 관리
 
-![React Component 구조](_posts/img/2025-01-15-react-and-jsx(2).png)
+![React Component 구조](/Users/leeseonga/github.io/2SEONGA.github.io/assets/images/2025-01-15-react-and-jsx(2).png)
 
 - React Component는 독립적이고 재사용 가능한 UI 요소
 - 부모 컴포넌트에서 자식 컴포넌트로 **Props**를 전달하여 데이터 공유/전달

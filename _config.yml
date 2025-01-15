@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Allday 2SEONGA learns # the main title
 
-tagline: Always trying to blog all the development knowledge I have learned. # it will display as the subtitle
+tagline: Trying to blog all the development knowledge I've learned. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.

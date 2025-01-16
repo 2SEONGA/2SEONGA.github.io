@@ -1,6 +1,6 @@
 ---
 title: |
-  React 특징 : VDOM, Render + Commit Phase 통한 렌더링 원리
+  React 특징 :Virtual DOM, Render + Commit Phase 통한 렌더링 원리
 description: >-
   React 특징 : Virtual DOM, Render + Commit Phase 통한 렌더링 원리 정리
 author: 2SEONGA
@@ -14,7 +14,7 @@ image:
 media_subpath: "/posts/2025-01-15-react-vdom-rendering"
 ---
 
-# React 특징 : VDOM, Render + Commit Phase 통한 렌더링 원리
+# React 특징 : Virtual DOM, Render + Commit Phase 통한 렌더링 원리
 
 ## Facebook 에서 React 의 등장 배경
 

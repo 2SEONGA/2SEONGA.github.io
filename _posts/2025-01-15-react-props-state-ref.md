@@ -498,7 +498,7 @@ function App() {
 - **다른 예시로 React Hook Form 사용 시 별도의 분리된 컴포넌트에 useForm 의 register 적용 시**
     - **문제 발생** = **3.2.2.3.2. 충격적인 사실 : 함수형 컴포넌트에는 Ref 가 미존재 → forwardRef 필요**
 
-## 4. 복습 : Props 와 State, Ref 사용
+## 4. 정리 : Props 와 State, Ref 사용
 
 <img alt="2025-01-15-react-props-state-ref(12)" src="https://github.com/user-attachments/assets/85531bef-4545-4930-9a44-9a19d4c27373" />
 
